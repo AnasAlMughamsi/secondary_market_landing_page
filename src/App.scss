@@ -1,0 +1,115 @@
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* flexbox and grid */
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column { 
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+/* height and width */
+
+.h-100 {height: 100%;}
+.w-100{width: 100%;}
+
+
+/* text align */
+.text-center {text-align: center;}
+.text-start {text-align: left;}
+.text-end {text-align: right;}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+.btn {
+  all: unset;
+  display: flex;
+  padding: 16px 32px;
+  border-radius: 8px;
+  color: white;
+  background-color: #3DB8FC;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #8A2BE1;
+    // border: 1px solid #8A2BE1;
+    border: none;
+  }
+}

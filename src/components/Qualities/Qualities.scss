@@ -1,0 +1,83 @@
+.qualities {
+    margin-block-start: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .quality-title {
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 4rem;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            width: 60%;
+            color: #080022;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 45.6px */
+        }
+
+        p {
+            color:#858A9B;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%; /* 22.8px */
+        }
+    }
+
+
+    .qualities-cards-container {
+        display: flex;
+        color: white;
+        gap: 25px;
+        margin-block-end: 5rem;
+        .quality-card {
+            width: 552px;
+            height: 307px;
+            display: flex;
+            text-align: left;
+            border-radius: 16px;
+            background: #10014B;
+            justify-content: start;
+            // align-items: start;
+
+            padding-inline-start:  46px;
+            
+
+            .jigsaw-img {
+                // width: 200px;
+                // height: 300px;
+                object-fit: contain;
+            }
+
+            .inner-card {
+                // justify-content: space-around;
+                align-items: start;
+                gap: 0.5rem;
+                justify-content: center;
+
+                h3 {
+                    margin: 0;
+                    font-size: 27px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 32.4px */
+                }
+                p {
+                    color:rgba(255, 255, 255, 0.70);
+                    font-size: 19px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 22.8px */
+                }
+
+            }
+        }
+
+
+
+    }
+}
