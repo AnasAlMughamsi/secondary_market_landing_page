@@ -28,7 +28,7 @@ const Qualities = () => {
             <h3>As Investor </h3>
             <p>Invest in company-run secondaries with the same 
               ease & company access as public markets.</p>
-            <a href="/" className="btn">Join as a investor</a>
+            <a href="/" className="btn">Join as a Investor</a>
           </div>
           <img className='card-hand-icon' src={"images/hand_holding_card.svg"} alt="logo"/>
         </div>
