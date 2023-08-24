@@ -1,12 +1,52 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Navbar/Navbar';
 import "./Home.scss"
 
 const Home = () => {
 
-    const [textFlip, settextFlip] = useState();
-    const textChange = ["Buy","Sell","Deal"];
+    const maxPadding = 0; // Initial padding of the container 
+    const maxScrollFor100 = 0; // Y Scroll Point where the image should be 100% width
+    const imgContainer = document.getElementById('img-landing')
 
+
+    function getPaddingHz(hzPadding, sizeUnit = 'px') {
+        return '0 ' + hzPadding + sizeUnit;
+    }
+
+    if(imgContainer) {
+        imgContainer.style.padding = getPaddingHz(maxPadding); 
+    }
+
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', function(event)  {
+            event.preventDefault();
+
+            const currentYHight = window.scrollY; 
+            const percent = 100 - (currentYHight >= maxScrollFor100 ? 100 : currentYHight / (maxScrollFor100 / 100));
+
+            console.log("scroll Y point: ",currentYHight)
+            const padding = maxPadding * (percent / 100);
+
+            if(currentYHight > 350 && currentYHight < 800) {
+                if(imgContainer) {
+                    imgContainer.classList.add("active-scroll");
+                } 
+            } 
+            else {
+                if(imgContainer) {
+                    imgContainer.classList.remove("active-scroll");
+                    imgContainer.style.backgroundColor = "white"
+                } 
+
+            }
+            
+        })
+        
+
+    }, [imgContainer])
+    
 
   return (
 
@@ -28,31 +68,23 @@ const Home = () => {
                             </div>
                         </span>
                     </h1>
-                        {/* <div className='text-uppercase header-title caption'>
-                            Right Way To 
-                            <div className='text-box'>
-                                <p>Deal</p>
-                                <p>Sell</p>
-                                <p>Buy</p>
-                            </div>
-
-                        </div> */}
-                    {/* </div> */}
-
-
+                    
                     <p className='lower_text'>Your Gateway to the Saudi Startups</p>
-                    {/* <div className='btn-container'> */}
                         <a href="/" className="btn">
                             Try it now
                             <img className='arrow-icon' src={"images/arrow.svg"} alt="logo"/>
-                        </a>
-
-                    {/* </div> */}
+                        </a>    
+                    
+                    <div className='scroll'>
+                        <img src={"images/scroll.svg"} alt="scroll"/>
+                    </div>
                 </div>
 
             </div>
-            <div className='landing-image'>
-                <img src={"images/photos.svg"} alt="logo" width="1199px" height="519px"/>
+
+
+            <div className='landing-image-container active-scroll' id='img-landing'>
+                <img src={"images/photos.svg"} alt="logo"/>
             </div>
         </header>
 

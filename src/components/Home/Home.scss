@@ -47,12 +47,10 @@
             display: inline-block;
             position: relative;
             white-space: nowrap;
-            animation: move 4s ease-in-out;
+            animation: move 3s ease-in-out ;
             animation-iteration-count: infinite;
-            // transition: move ease-in-out 5s;
             animation-delay: 2s;
-            // font-size: 65px;
-
+            // animation: ;
             background: linear-gradient(to right, #3db8fc, #8a2be1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -66,12 +64,9 @@
 
 @keyframes move {
     0%  { top: 0px; }
-    20% { top: -60px; }
-    40% { top: -130px; }
-    50% { top: -0px; }
+    10%, 30% { top: -60px; }
+    40%, 60% { top: -120px; }
     80% { top: -0px; }
-    // 80% { top: -0px;}
-    // 80% { top: -0px;}
 }
 .upper_text {
     text-align: center;
@@ -83,14 +78,15 @@
     /* padding-block-end: 96px; */
 }
 .lower_text {
-    padding-block-start: 35px;
+    padding-block-end: 35px;
     color: #080022B2;
     text-align: center;
     font-family: Plus Jakarta Sans;
     font-size: 19px;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%;
+    // color: transparent;
+    // line-height: 120%;
     // width: 60%;
 }
 
@@ -99,10 +95,22 @@
     margin-inline-start: 10px;
 }
 
-.landing-image {
-    margin-block-start: 117px;
+.scroll {
+    margin-block-start: 4rem;
 }
 
+.landing-image-container {
+    margin-block-start: 117px;
+    transition: scale 2s ease-in-out;
+    // background-color: #3db8fc;
+    scale: 1;
+}
+
+
+.active-scroll {
+    // scale: 1.3;
+    // background-color: red;
+}
 
 
 

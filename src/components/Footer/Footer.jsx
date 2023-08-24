@@ -1,8 +1,10 @@
 import React from 'react'
 import "./Footer.scss"
 import {FaTwitter, FaTwitch, FaYoutube} from 'react-icons/fa'
-
+import Contact from './Contact/Contact'
 const Footer = () => {
+
+
   return (
     <div className='footer'>
       <div className='footer-content'>
@@ -24,8 +26,7 @@ const Footer = () => {
         </div>
         </div>
         <div className='contact-from-container'>
-          Contact Form
-          
+          <Contact/>
         </div>
       </div>
     </div>

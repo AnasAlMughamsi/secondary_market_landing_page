@@ -1,20 +1,13 @@
 import React from 'react'
 import { Formik } from 'formik';
-import images from '../../constants/images';
-import "./Contact.css"
+import "./Contact.scss"
 
 const Contact = () => {
   return (
-    <section className='contact section-p-top bg-black' id='contact'> 
-      <div className='container'>
-        <div className='contact-content grid text-center'>
-          <div className='contact-left'>
-            <div className='section-t'>
-              <h3>Let's talk</h3>
-              <p className='text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, assumenda quia repellendus architecto culpa nisi?</p>
-            </div>
+    <section className='contact-section'> 
+        <h3>Contact Form</h3>
             <Formik
-              initialValues={{name:'', email: '', address: '' }}
+              initialValues={{name:'', email: '', message: '' }}
               validate={values => {
                 const errors = {};
 
@@ -31,8 +24,8 @@ const Contact = () => {
                   errors.email = 'Invalid email address';
                 }
 
-                if(!values.address) {
-                  errors.address = "Addres is required";
+                if(!values.message) {
+                  errors.message = "message is required";
                 }
                 return errors;
               }}
@@ -52,7 +45,16 @@ const Contact = () => {
                 handleSubmit,
                 isSubmitting,
               }) => (
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className='form-container'>
+                  <div className='form-elem'>
+                    <input type='text' name='email' placeholder='Email'
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                      className='form-control'/>
+                      <span className='form-control-text'>{errors.email && touched.email && errors.email}</span>
+                  </div>
+
                   <div className='form-elem'>
                     <input type='text' name='name'
                       onChange={handleChange}
@@ -61,35 +63,22 @@ const Contact = () => {
                       className='form-control'/>
                       <span className='form-control-text'>{errors.name && touched.name && errors.name}</span>
                   </div>
+
                   <div className='form-elem'>
-                    <input type='text' name='email'
+                    <input type='text' name='message'
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      value={values.email}
+                      value={values.message}
                       className='form-control'/>
-                      <span className='form-control-text'>{errors.email && touched.email && errors.email}</span>
+                      <span className='form-control-text'>{errors.message && touched.message && errors.message}</span>
                   </div>
-                  <div className='form-elem'>
-                    <input type='text' name='address'
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.address}
-                      className='form-control'/>
-                      <span className='form-control-text'>{errors.address && touched.address && errors.address}</span>
-                  </div>
-                  <div className='flex flex-start'>
-                    <button type='submit' className='submit-btn' disabled={isSubmitting}>Contact us</button>
+
+                  <div>
+                    <button type='submit' className='submit-btn' disabled={isSubmitting}>Submit Message</button>
                   </div>
                 </form>
               )}
             </Formik>
-          </div>
-          <div className='contact-right'>
-            <img src={images.form_main_img} alt='contact-img' className='contact-img'/>
-          </div>
-        </div>
-      </div>
-
     </section>
   )
 }
