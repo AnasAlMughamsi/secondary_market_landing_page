@@ -18,14 +18,20 @@
         align-items: center;
         
         input[type=text] {
-            padding: 5px 24px;
+            padding: 4px 24px;
             
+        }
+        textarea {
+            resize: none;
+            padding: 15px 24px;
+            height: 100px !important;
+            // font-size: 10px;
         }
 
         .form-control {
             border: none;
             color: #FFFFFFB2;
-            font-size: 18px;
+            font-size: 15px;
             height: 48px;
             width: 456px;
             border-radius: 8px;
@@ -33,6 +39,12 @@
             
             &::placeholder {
                 color: #FFFFFFB2;
+                font-size: 15px;
+            }
+
+            &:focus-visible{
+                outline: 2px solid #FFFFFFB2;
+                outline-offset: 2px;
             }
         }
     
@@ -58,8 +70,8 @@
             cursor: pointer;
             
             &:focus-visible{
-                // background: #3db8fc;
-                outline: 1px solid #7E27CD;
+                outline: 1px solid #FFFFFFB2;
+                outline-offset: 2px;
             }
     
         }
@@ -67,11 +79,11 @@
     
 }
 
-@media screen and (min-width: 992px) {
-    .contact .contact-content{
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 40px;
-        row-gap: 0;
-        align-items: center;
-    }
-}
+// @media screen and (min-width: 992px) {
+//     .contact .contact-content{
+//         grid-template-columns: repeat(2, 1fr);
+//         column-gap: 40px;
+//         row-gap: 0;
+//         align-items: center;
+//     }
+// }

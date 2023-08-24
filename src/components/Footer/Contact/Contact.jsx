@@ -25,7 +25,7 @@ const Contact = () => {
                 }
 
                 if(!values.message) {
-                  errors.message = "message is required";
+                  errors.message = "Message is required";
                 }
                 return errors;
               }}
@@ -56,7 +56,7 @@ const Contact = () => {
                   </div>
 
                   <div className='form-elem'>
-                    <input type='text' name='name'
+                    <input type='text' name='name' placeholder='Name'
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.name}
@@ -65,12 +65,21 @@ const Contact = () => {
                   </div>
 
                   <div className='form-elem'>
-                    <input type='text' name='message'
+                    {/* <input type='text' name='message' placeholder='Message'
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.message}
                       className='form-control'/>
-                      <span className='form-control-text'>{errors.message && touched.message && errors.message}</span>
+                      <span className='form-control-text'>{errors.message && touched.message && errors.message}</span> */}
+                    <textarea 
+                        name='message'
+                        placeholder='Message'
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.message}
+                        className='form-control'
+                    />    
+                        <span className='form-control-text'>{errors.message && touched.message && errors.message}</span>
                   </div>
 
                   <div>
