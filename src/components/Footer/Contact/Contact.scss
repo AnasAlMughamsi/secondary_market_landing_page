@@ -1,7 +1,9 @@
 .contact-section {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    justify-content: start;
+    align-items: start;
+    // text-align: left;
     h3 {
         color:  #FFF;
         font-size: 19px;

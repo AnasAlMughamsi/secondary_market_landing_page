@@ -8,6 +8,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-content'>
+
         <div className='about-container'>
           <img src='images/logo_second.svg' alt='logo-second'/>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. pturi magni,
@@ -24,11 +25,15 @@ const Footer = () => {
             <li><a href="/" ><FaTwitch/></a> </li>
           </ul>
         </div>
+
         </div>
+
         <div className='contact-from-container'>
           <Contact/>
         </div>
+        
       </div>
+
     </div>
   )
 }
