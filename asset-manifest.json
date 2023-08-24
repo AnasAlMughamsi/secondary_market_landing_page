@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/secondary_market_landing_page/index.html/static/css/main.7c386f67.css",
-    "main.js": "/secondary_market_landing_page/index.html/static/js/main.12a328d1.js",
-    "index.html": "/secondary_market_landing_page/index.html/index.html",
-    "static/media/Rectangle_up.svg": "/secondary_market_landing_page/index.html/static/media/Rectangle_up.9f5c0b085a14204511c1.svg",
-    "main.7c386f67.css.map": "/secondary_market_landing_page/index.html/static/css/main.7c386f67.css.map",
-    "main.12a328d1.js.map": "/secondary_market_landing_page/index.html/static/js/main.12a328d1.js.map"
+    "main.css": "/secondary_market_landing_page/static/css/main.9328405e.css",
+    "main.js": "/secondary_market_landing_page/static/js/main.a39845bc.js",
+    "index.html": "/secondary_market_landing_page/index.html",
+    "static/media/Rectangle_up.svg": "/secondary_market_landing_page/static/media/Rectangle_up.9f5c0b085a14204511c1.svg",
+    "main.9328405e.css.map": "/secondary_market_landing_page/static/css/main.9328405e.css.map",
+    "main.a39845bc.js.map": "/secondary_market_landing_page/static/js/main.a39845bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c386f67.css",
-    "static/js/main.12a328d1.js"
+    "static/css/main.9328405e.css",
+    "static/js/main.a39845bc.js"
   ]
 }
