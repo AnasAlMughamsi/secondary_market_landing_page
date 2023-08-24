@@ -2,7 +2,7 @@
   "homepage": "https://anasalmughamsi.github.io/secondary_market_landing_page/",
   "name": "secondry_market_landing_page",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
