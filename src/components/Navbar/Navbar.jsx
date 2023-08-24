@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className='navbar-content felx'>
           <div className='brand-logo flex flex-between'>
             <div className='logo'>
-              <img src={"images/logo.svg"} alt="logo" width="190px" height="40px"/>
+              <img src={"/images/logo.svg"} alt="logo" width="190px" height="40px"/>
             </div>
           </div>
         </div>
