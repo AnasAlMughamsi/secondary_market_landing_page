@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/secondary_market_landing_page/static/css/main.cb8022d1.css",
-    "main.js": "/secondary_market_landing_page/static/js/main.15c19674.js",
+    "main.js": "/secondary_market_landing_page/static/js/main.fc52440e.js",
     "index.html": "/secondary_market_landing_page/index.html",
     "static/media/Rectangle_up.svg": "/secondary_market_landing_page/static/media/Rectangle_up.9f5c0b085a14204511c1.svg",
     "main.cb8022d1.css.map": "/secondary_market_landing_page/static/css/main.cb8022d1.css.map",
-    "main.15c19674.js.map": "/secondary_market_landing_page/static/js/main.15c19674.js.map"
+    "main.fc52440e.js.map": "/secondary_market_landing_page/static/js/main.fc52440e.js.map"
   },
   "entrypoints": [
     "static/css/main.cb8022d1.css",
-    "static/js/main.15c19674.js"
+    "static/js/main.fc52440e.js"
   ]
 }
