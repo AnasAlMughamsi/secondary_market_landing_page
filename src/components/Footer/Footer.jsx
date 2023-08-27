@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer.scss"
-import {FaTwitter, FaTwitch, FaYoutube} from 'react-icons/fa'
+import {FaTwitter, FaFacebook, FaLinkedin} from 'react-icons/fa'
 import Contact from './Contact/Contact'
 const Footer = () => {
 
@@ -16,9 +16,9 @@ const Footer = () => {
         <div className='social-container'>
           <ul>
             <li className='social-text'>Social Media</li>
+            <li><a href="/" ><FaLinkedin/></a> </li>
             <li><a href="/" ><FaTwitter/></a> </li>
-            <li><a href="/" ><FaYoutube/></a> </li>
-            <li><a href="/" ><FaTwitch/></a> </li>
+            <li><a href="/" ><FaFacebook/></a> </li>
           </ul>
         </div>
 
