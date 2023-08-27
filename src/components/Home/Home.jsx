@@ -1,53 +1,61 @@
 import React, { useEffect } from 'react'
 import Navbar from '../Navbar/Navbar';
+import ReactGA from "react-ga4";
+
 import "./Home.scss"
 
 const Home = () => {
 
-    const maxPadding = 0; // Initial padding of the container 
-    const maxScrollFor100 = 0; // Y Scroll Point where the image should be 100% width
-    const imgContainer = document.getElementById('img-landing')
+    // const maxPadding = 0; // Initial padding of the container 
+    // const maxScrollFor100 = 0; // Y Scroll Point where the image should be 100% width
+    // const imgContainer = document.getElementById('img-landing')
 
 
-    function getPaddingHz(hzPadding, sizeUnit = 'px') {
-        return '0 ' + hzPadding + sizeUnit;
-    }
+    // function getPaddingHz(hzPadding, sizeUnit = 'px') {
+    //     return '0 ' + hzPadding + sizeUnit;
+    // }
 
-    if(imgContainer) {
-        imgContainer.style.padding = getPaddingHz(maxPadding); 
-    }
+    // if(imgContainer) {
+    //     imgContainer.style.padding = getPaddingHz(maxPadding); 
+    // }
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        window.addEventListener('scroll', function(event)  {
-            event.preventDefault();
+    //     window.addEventListener('scroll', function(event)  {
+    //         event.preventDefault();
 
-            const currentYHight = window.scrollY; 
-            const percent = 100 - (currentYHight >= maxScrollFor100 ? 100 : currentYHight / (maxScrollFor100 / 100));
+    //         const currentYHight = window.scrollY; 
+    //         const percent = 100 - (currentYHight >= maxScrollFor100 ? 100 : currentYHight / (maxScrollFor100 / 100));
 
-            console.log("scroll Y point: ",currentYHight)
-            const padding = maxPadding * (percent / 100);
+    //         console.log("scroll Y point: ",currentYHight)
+    //         const padding = maxPadding * (percent / 100);
 
-            if(currentYHight > 350 && currentYHight < 800) {
-                if(imgContainer) {
-                    imgContainer.classList.add("active-scroll");
-                } 
-            } 
-            else {
-                if(imgContainer) {
-                    imgContainer.classList.remove("active-scroll");
-                    imgContainer.style.backgroundColor = "white"
-                } 
+    //         if(currentYHight > 350 && currentYHight < 800) {
+    //             if(imgContainer) {
+    //                 imgContainer.classList.add("active-scroll");
+    //             } 
+    //         } 
+    //         else {
+    //             if(imgContainer) {
+    //                 imgContainer.classList.remove("active-scroll");
+    //                 imgContainer.style.backgroundColor = "white"
+    //             } 
 
-            }
+    //         }
             
-        })
+    //     })
         
 
-    }, [imgContainer])
+    // }, [imgContainer]);
     
 
+    const handlBtn = () => {
+        ReactGA.event({
+            category: "Home",
+            action: "S Try it now btn",
+        });
+    }
   return (
 
     <header className="header flex flex-center flex-column" id="header">
@@ -70,7 +78,7 @@ const Home = () => {
                     </h1>
                     
                     <p className='lower_text'>Your Gateway to the Saudi Startups</p>
-                        <a href="/" className="btn">
+                        <a href="https://secondary-market.netlify.app/register" className="btn" onClick={handlBtn}>
                             Try it now
                             <img className='arrow-icon' src={"images/arrow.svg"} alt="logo"/>
                         </a>    
