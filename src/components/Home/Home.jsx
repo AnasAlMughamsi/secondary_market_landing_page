@@ -7,13 +7,13 @@ import "./Home.scss"
 
 const Home = () => {
     // const [isSticky, setIsSticky] = useState(false);
-    let image1 = "/images/photos.svg";
+    // let image1 = "/images/photos.svg";
     let image2 = "/images/photos(scrolling).svg";
-    const [image, setImage] = useState(image1)
+    // const [image, setImage] = useState(image1)
     const [scaling, setScaling] = useState(null)
     
     const { scrollYProgress } = useScroll();
-    const divImage = document.getElementById('wrapper')
+    // const divImage = document.getElementById('wrapper')
 
     const swapImages = () => {
         const windowHeight = window.scrollY;
@@ -30,7 +30,12 @@ const Home = () => {
         //     }
         // }
         // (windowHeight > 350) && (windowHeight < 800) ? setImage(image2) : setImage(image1);
-        (windowHeight > 250) && (windowHeight < 800) ? setScaling(scaleAnim) : setScaling(scaleReset);
+        if((windowHeight > 250) && (windowHeight < 800)) {
+            setScaling(scaleAnim);
+        } else {
+            setScaling(scaleReset)
+        }
+        // ((windowHeight > 250) && (windowHeight < 800)) ? setScaling(scaleAnim) : setScaling(scaleReset);
       };
 
 
@@ -48,7 +53,7 @@ const Home = () => {
         const scaleAnim = useTransform(scrollYProgress, [0, 0.5], [1, 1.13]);   
         const scaleReset = useTransform(scrollYProgress, [0, 0.5], [1, 1]);
 
-        const yPosAnim = useTransform(scrollYProgress, [0, 0.4, 1], [0, -100, 0])
+        // const yPosAnim = useTransform(scrollYProgress, [0, 0.4, 1], [0, -100, 0])
 
 
         const handlBtn = () => {
