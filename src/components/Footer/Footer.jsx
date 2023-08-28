@@ -7,7 +7,7 @@ const Footer = () => {
 
 
   return (
-    <div className='footer'>
+    <div className='footer' id='contact'>
       <div className='footer-content'>
 
         <div className='about-container col'>

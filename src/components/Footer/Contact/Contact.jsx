@@ -8,27 +8,27 @@ const Contact = () => {
         <h3>Contact Form</h3>
             <Formik
               initialValues={{name:'', email: '', message: '' }}
-              validate={values => {
-                const errors = {};
+              // validate={values => {
+              //   const errors = {};
 
-                if(!values.name) {
-                  errors.name = "Name is required"
-                } 
+              //   if(!values.name) {
+              //     errors.name = "Name is required"
+              //   } 
                 
 
-                if (!values.email) {
-                  errors.email = 'Email is required';
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = 'Invalid email address';
-                }
+              //   if (!values.email) {
+              //     errors.email = 'Email is required';
+              //   } else if (
+              //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+              //   ) {
+              //     errors.email = 'Invalid email address';
+              //   }
 
-                if(!values.message) {
-                  errors.message = "Message is required";
-                }
-                return errors;
-              }}
+              //   if(!values.message) {
+              //     errors.message = "Message is required";
+              //   }
+              //   return errors;
+              // }}
               onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
                   alert(JSON.stringify(values, null, 2));
@@ -52,7 +52,7 @@ const Contact = () => {
                       onBlur={handleBlur}
                       value={values.email}
                       className='form-control'/>
-                      <span className='form-control-text'>{errors.email && touched.email && errors.email}</span>
+                      {/* <span className='form-control-text'>{errors.email && touched.email && errors.email}</span> */}
                   </div>
 
                   <div className='form-elem'>
@@ -61,16 +61,10 @@ const Contact = () => {
                       onBlur={handleBlur}
                       value={values.name}
                       className='form-control'/>
-                      <span className='form-control-text'>{errors.name && touched.name && errors.name}</span>
+                      {/* <span className='form-control-text'>{errors.name && touched.name && errors.name}</span> */}
                   </div>
 
                   <div className='form-elem'>
-                    {/* <input type='text' name='message' placeholder='Message'
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.message}
-                      className='form-control'/>
-                      <span className='form-control-text'>{errors.message && touched.message && errors.message}</span> */}
                     <textarea 
                         name='message'
                         placeholder='Message'
@@ -79,7 +73,7 @@ const Contact = () => {
                         value={values.message}
                         className='form-control'
                     />    
-                        <span className='form-control-text'>{errors.message && touched.message && errors.message}</span>
+                      {/* <span className='form-control-text'>{errors.message && touched.message && errors.message}</span> */}
                   </div>
 
                   <div>

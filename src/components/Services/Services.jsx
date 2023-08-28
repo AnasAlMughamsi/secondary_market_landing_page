@@ -2,7 +2,7 @@ import React from 'react'
 import "./Services.scss"
 const Services = () => {
   return (
-    <div className='services-container'>
+    <div className='services-container' id='service'>
       <div className='services-content'>
         
         <div className='service-title'>

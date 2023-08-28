@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/Navbar';
 import ReactGA from "react-ga4";
 
 import "./Home.scss"
 
 const Home = () => {
+    const [isSticky, setIsSticky] = useState(false);
 
     // const maxPadding = 0; // Initial padding of the container 
     // const maxScrollFor100 = 0; // Y Scroll Point where the image should be 100% width
@@ -49,6 +50,19 @@ const Home = () => {
 
     // }, [imgContainer]);
     
+    useEffect(() => {
+        if (typeof window === undefined) return;
+        window.addEventListener("scroll", stickNavbar);
+    
+        return () => {
+          window.removeEventListener("scroll", stickNavbar);
+        };
+      }, []);
+    
+      const stickNavbar = () => {
+        const windowHeight = window.scrollY;
+        windowHeight > 50 ? setIsSticky(true) : setIsSticky(false);
+      };
 
     const handlBtn = () => {
         ReactGA.event({
@@ -58,7 +72,7 @@ const Home = () => {
     }
   return (
 
-    <header className="header flex flex-center flex-column" id="header">
+    <header className="header flex flex-center flex-column" id="home">
             <Navbar/>
             <div className="header-container">
                 <div className="header-content flex flex-column">

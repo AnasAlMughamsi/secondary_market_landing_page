@@ -3,7 +3,7 @@ import "./Qualities.scss"
 
 const Qualities = () => {
   return (
-    <div className='qualities'>
+    <div className='qualities' id='qualities'>
 
       <div className='quality-title'>
         <h2>Join us Now and be one of our Community </h2>
