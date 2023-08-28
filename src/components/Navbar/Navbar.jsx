@@ -1,7 +1,6 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import ReactGA from "react-ga4";
-
 import "./Navbar.scss"
 
 
@@ -19,7 +18,9 @@ const Navbar = () => {
       <div className='container w-100'>
         <div className='navbar-content'>
             <div className='logo'>
-              <img src={"images/logo.svg"} alt="logo" width="190px" height="40px"/>
+            {/* <img src={process.env.PUBLIC_URL + '/yourPathHere.jpg'} />  */}
+
+              <img src={"/images/logo.svg"} alt="logo" width="190px" height="40px"/>
             </div>
 
             <div className='flex'>
