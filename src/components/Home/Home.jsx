@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/Navbar';
 import ReactGA from "react-ga4";
-import { easeInOut, motion,useScroll, useTransform } from "framer-motion";
+import { motion ,useScroll, useTransform } from "framer-motion";
 
 import "./Home.scss"
 
@@ -100,8 +100,8 @@ const Home = () => {
         <div className="wrapper">
             <motion.div>
                 <motion.img
-                    initial={{ y: -10 }}
-                    animate={{ y: 10 }}
+                    initial={{ y: -3 }}
+                    animate={{ y: 3 }}
                     transition={{
                         type: "smooth",
                         repeatType: "mirror",
