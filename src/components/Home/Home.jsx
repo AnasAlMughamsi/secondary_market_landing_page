@@ -7,7 +7,7 @@ import "./Home.scss"
 
 const Home = () => {
     // const [isSticky, setIsSticky] = useState(false);
-    // let image1 = "/images/photos.svg";
+    let image1 = "/images/photos.svg";
     let image2 = "/images/photos(scrolling).svg";
     // const [image, setImage] = useState(image1)
     const [scaling, setScaling] = useState(null)
@@ -70,7 +70,7 @@ const Home = () => {
         <div className="header-container">
             <div className="header-content flex flex-column">
                 <p className='upper_text'>We know that trading has become important</p>
-                <h1 className="text-uppercase header-title">Here it is, yours truly</h1>
+                <h1 className="text-uppercase header-title">The First Private-Company Market Place.</h1>
                 <h1 className="text-uppercase header-title">
                     Right Way To
                     <span className='text-flipping'>
@@ -98,16 +98,19 @@ const Home = () => {
         </div>
 
         <div className="wrapper">
-            <motion.div style={{   
-                scale: scaling,
-                transition: easeInOut}}>
+            <motion.div>
                 <motion.img
+                    initial={{ y: -10 }}
+                    animate={{ y: 10 }}
                     transition={{
-                    type: "tween", duration: 0.8 
+                        type: "smooth",
+                        repeatType: "mirror",
+                        duration: 2,
+                        repeat: Infinity,
                     }}
                     className='image-landing'
-                    style={{scale: scaling}}
-                    src={image2}
+                    // style={{scale: scaling}}
+                    src={image1}
                     alt="floater"
                 />
                 {/* <img src={image} alt=''/> */}

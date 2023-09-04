@@ -64,6 +64,14 @@
     }
 }
 
+@media screen and (min-width: 1000px){
+    .header {
+        background-color: red;
+        // font-size: 88px;
+        // max-width: 920px;
+    }
+}
+
 
 @keyframes move {
     0%  { top: 0px; }
