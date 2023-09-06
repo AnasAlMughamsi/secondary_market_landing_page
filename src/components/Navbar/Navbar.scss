@@ -1,47 +1,99 @@
 .navbar {
-    height: 15vh;
+    height: 10vh;
     z-index: 999;
+    // border: 1px solid red;
+
+    // background-color: none;
+    border: none;
+    // background: 
+    // linear-gradient(to top, rgba(100, 198, 253, 0.2), rgba(255,0,0,0) 70.71%),
+    // linear-gradient(to bottom, rgba(125, 207, 253, 0.1), rgba(0,255,0,0) 90%),
+    // linear-gradient(to top, rgba(125, 207, 253, 0.2), rgba(0,255,0,0) 90%);
+
+    // transition: all ease-in-out 0.1s;
+
 }
 
+// .sticky_navbar {
+//     position: sticky;
+//     top: 0;
+//     // background-color: #8d36dfdb;
+//     background-color: hsla(271, 35%, 63%, 0.6);
+
+//      .btn-nav {
+//         color: #FFF;
+//         margin-inline-start: 2rem;
+//         border-radius: 6px;
+//         background:#31255C;
+//         padding: 12px 24px;
+
+//         &:hover {
+//             // background-color: hsla(271, 95%, 43%, 1)
+//         }
+//     }
+
+// }
+
 .navbar-content {
+    margin-block-start: 5px;
     padding: 0px 10rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+   
 }
 
 .navbar-nav {
     display: flex;
     gap: 2rem;
 
-    
+
+    .active_bold {
+        a {
+
+            color: #8A2BE1 ;
+        }
+    }
+
     li {
         a {
-                font-size: 17px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 120%; 
-                color: #31255C;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%; 
+            color: #31255C;
 
+            .line {
+                display: none;
+                position: absolute;
+                height: 4px;
+                top: -1px; 
+                border-radius: 16px;
+                background: #8A2BE1;
+                // opacity: 0.8; 
+
+            }
+            .active {
+                // display: block;
+                position: absolute;
+                height: 4px;
+                top: -1px; 
+                border-radius: 16px;
+                background: #8A2BE1;
+                
+            }
+            
+
+            &:hover {
+                color: #8A2BE1;
+                
                 .line {
-                    display: none;
-                    position: absolute;
-                    height: 4px;
-                    top: -1px; 
-                    border-radius: 16px;
-                    background: #8A2BE1;
-                    // opacity: 0.8; 
-                }
-
-                &:hover {
-                    color: #8A2BE1;
-                    
-                    .line {
-                        display: block;
-                    }
+                    display: block;
                 }
             }
         }
+    }
 }
 
 .btn-nav {

@@ -2,12 +2,12 @@ import React from 'react'
 import "./Services.scss"
 const Services = () => {
   return (
-    <div className='services-container' id='service'>
+    <section className='services-container' id='service'>
       <div className='services-content'>
         
         <div className='service-title'>
           <h1>That the Way To Start Trading</h1>
-          <p>Try a Variety of Benefits when Using Our Services.</p>
+          <p>Fair execution. <br/> All investors are treated equally and transparently.</p>
         </div>
 
         <div className='service-list'>
@@ -16,8 +16,8 @@ const Services = () => {
               <span className='corner-line-1'></span> 
               <div className='service-content-list'>
                 <span className='number'>1</span>
-                <h2>Marketplace</h2>
-                <p>To Trade your Shares Securely</p>
+                <h2>List</h2>
+                <p>Simple steps to list your company in dynamic market</p>
               </div>
             </li>
 
@@ -25,8 +25,8 @@ const Services = () => {
               <span className='corner-line-2'></span> 
               <div className='service-content-list'>
                 <span className='number'>2</span>
-                <h2>Investment Portfolio</h2>
-                <p>Easily manage your Assets</p>
+                <h2>Sell</h2>
+                <p>Clear path to liquidity with real time pricing</p>
               </div>
             </li>
 
@@ -34,8 +34,8 @@ const Services = () => {
               <span className='corner-line-3'></span> 
               <div className='service-content-list'>
                 <span className='number-3'>3</span>
-                <h2>Fees Transactions</h2>
-                <p>Get charged only when you trade</p>
+                <h2>Invest</h2>
+                <p>Access to pre-vetted growing private companies</p>
               </div>
             </li>
 
@@ -44,7 +44,7 @@ const Services = () => {
 
       </div>
 
-    </div>
+    </section>
   )
 }
 

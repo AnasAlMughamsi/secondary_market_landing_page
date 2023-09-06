@@ -1,0 +1,65 @@
+.subscribe-container {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-block-end: 5rem;
+    width: 1128px;
+    height: 147px;
+    background-color: #3DB8FC;
+    border-radius: 16px;
+
+    .subscribe-header {
+        color: #FFF;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 32.4px */
+        padding: 6rem;
+        width: 30vw;
+        text-align: left;
+    }
+
+
+    .subscribe-form {
+        display: inline-block;
+        // flex-direction: row;
+
+        .subscribe-input {
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.10);
+            // display: flex;
+            width: 253px;
+            padding: 16px 15px 15px 24px;
+            // align-items: center;
+            margin-inline-end: 1rem;
+
+            border: none;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            &:focus {
+                outline: 2px solid #FFFFFFB2;
+            }
+        }
+
+        .subscribe-btn {
+            color: white;
+            width: 127px;
+            padding: 16px 32px;
+            gap: 8px;
+            border-radius: 8px;
+            background: #22658B;
+            outline: none;
+            border: none;
+
+            &:hover {
+                background-color: #8a2be1;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

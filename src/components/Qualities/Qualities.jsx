@@ -30,7 +30,7 @@ const Qualities = () => {
               ease & company access as public markets.</p>
             <a href="/" className="btn">Join as a Investor</a>
           </div>
-          <img className='card-hand-icon' src={"images/Magnifier.svg"} alt="logo"/>
+          <img className='card-hand-icon' src={"images/Frame2.svg"} alt="logo"/>
         </div>
 
       </div>
