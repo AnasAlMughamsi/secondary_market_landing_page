@@ -1,11 +1,12 @@
+
+
 .subscribe-container {
     display: flex;
     // justify-content: space-between;
     align-items: center;
     margin: auto;
     margin-block-end: 5rem;
-    width: 1128px;
-    height: 147px;
+    width: var(--email_card_width);
     background-color: #3DB8FC;
     border-radius: 16px;
 
@@ -15,25 +16,21 @@
         font-style: normal;
         font-weight: 700;
         line-height: 120%; /* 32.4px */
-        padding: 6rem;
+        padding: 3rem;
         width: 30vw;
         text-align: left;
     }
 
 
     .subscribe-form {
-        display: inline-block;
-        // flex-direction: row;
-
+        display: flex;
+        
         .subscribe-input {
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.10);
-            // display: flex;
             width: 253px;
             padding: 16px 15px 15px 24px;
-            // align-items: center;
             margin-inline-end: 1rem;
-
             border: none;
 
             &::placeholder {
@@ -47,7 +44,6 @@
 
         .subscribe-btn {
             color: white;
-            width: 127px;
             padding: 16px 32px;
             gap: 8px;
             border-radius: 8px;
@@ -63,3 +59,36 @@
 
     }
 }
+
+
+
+@media screen and (max-width: 768px) {
+    // here remove link and add three lines
+
+    .subscribe-container {
+        // margin: auto;
+        // justify-content: center;
+        // align-items: center;
+        .subscribe-header {
+            font-size: 20px;
+            padding: 2rem;
+        }
+    }
+
+    .subscribe-form {
+        display: flex;
+        flex-direction: column !important;
+        align-self: center !important;
+
+    }
+    .subscribe-btn {
+        // background-color: 1px solid red;
+        margin-block-start: 0.5rem;
+        color: red ;
+    }
+    
+}
+  
+  @media screen and (max-width: 640px) {
+    
+  }

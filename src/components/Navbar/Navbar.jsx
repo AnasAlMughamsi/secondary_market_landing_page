@@ -7,6 +7,7 @@ import "./Navbar.scss"
 
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const currentRoute = useLocation().hash.toLowerCase();
   console.log("currentRoute: ", currentRoute)
@@ -40,16 +41,13 @@ if(window > 100) {
 
   return (
     <nav className={`navbar w-100 flex ${stickyClass}`}>
-      <div className='container w-100'>
-        <div className='navbar-content'>
+        <div className='navbar-content w-100'>
             <div className='logo'>
-            {/* <img src={process.env.PUBLIC_URL + '/yourPathHere.jpg'} />  */}
-
               <img src={"/images/logo.svg"} alt="logo" width="190px" height="40px"/>
             </div>
 
             <div className='flex'>
-              <ul className='navbar-nav'>
+              <ul className='navbar-nav-links'>
                 <li className={currentRoute.includes("#home") ? "active_bold":"not_active"}> <HashLink smooth to='#home'><span className={currentRoute.includes("#home") ? "active":"line"} style={{width: "80px"}}></span> 
                     Welcome</HashLink>
                 </li>
@@ -61,12 +59,31 @@ if(window > 100) {
               <a href="https://secondary-market.netlify.app/register" 
                   className="btn-nav" 
                   onClick={handlBtn}> Sing in
-              </a>  
+              </a>
+
+              
+              <div className="navbar-burge" onClick={() => setIsOpen(!isOpen)}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+              </div>
+
+              {isOpen && (
+                <div className="responsiveMenu">
+                  <Link href="/">Service</Link>
+                  <Link href="/">Join Us</Link>
+                  <Link href="/">Contact Us</Link>
+
+                  <a href="https://secondary-market.netlify.app/register" 
+                      className="btn-nav" 
+                      onClick={handlBtn}> Sing in
+                  </a>
+                </div>
+              )}
+
             </div>
 
-
         </div>
-      </div>
     </nav>
   )
 }

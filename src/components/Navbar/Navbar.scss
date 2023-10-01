@@ -40,23 +40,20 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-   
 }
 
-.navbar-nav {
+.navbar-nav-links {
     display: flex;
     gap: 2rem;
 
-
     .active_bold {
         a {
-
             color: #8A2BE1 ;
         }
     }
 
     li {
+        // flex: 2;
         a {
             font-size: 17px;
             font-style: normal;
@@ -107,3 +104,37 @@
         // background-color: hsla(271, 95%, 43%, 1)
     }
 }
+
+
+
+@media screen and (max-width: 1536px) {
+    .wrapper {
+      max-width: 1366px;
+    }
+  }
+  
+  @media screen and (max-width: 1280px) {
+      
+    .navbar-content {
+        // border: 1px solid red;
+        padding: 0;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+    // here remove link and add three lines
+    .navbar-nav-links {
+        display: none;
+    }
+    
+  }
+  
+  @media screen and (max-width: 640px) {
+    .wrapper {
+      max-width: 475px;
+    }
+  }

@@ -8,14 +8,14 @@ import "./Home.scss"
 const Home = () => {
     // const [isSticky, setIsSticky] = useState(false);
     let image1 = "/images/photos.svg";
-    let image2 = "/images/photos(scrolling).svg";
-    // const [image, setImage] = useState(image1)
+    let image2 = "/images/photos-short.png";
     const [scaling, setScaling] = useState(null)
     
     const { scrollYProgress } = useScroll();
     // const divImage = document.getElementById('wrapper')
 
     const swapImages = () => {
+
         const windowHeight = window.scrollY;
         // if((windowHeight > 350) && (windowHeight < 800)) {
         //     if(divImage !== null) {
@@ -77,15 +77,15 @@ const Home = () => {
                         <div className='inner-flipping'>
                             <span className='text-list'>
                                 &nbsp;Deal<br /> 
-                                Sell<br />
-                                Buy
+                                &nbsp;Sell<br />
+                                &nbsp;Buy
                             </span>
                         </div>
                     </span>
                 </h1>
                 
                 <p className='lower_text'>Your Gateway to the Saudi Startups</p>
-                    <a href="https://secondary-market.netlify.app/register" className="btn" onClick={handlBtn}>
+                    <a href="https://stock.rasmal.io/" className="btn" onClick={handlBtn}>
                         Try it now
                         <img className='arrow-icon' src={"/images/arrow.svg"} alt="logo"/>
                     </a>    
@@ -99,7 +99,7 @@ const Home = () => {
 
         <div className="wrapper">
             <motion.div>
-                <motion.img
+                {/* <motion.img
                     initial={{ y: -3 }}
                     animate={{ y: 3 }}
                     transition={{
@@ -110,10 +110,14 @@ const Home = () => {
                     }}
                     className='image-landing'
                     // style={{scale: scaling}}
-                    src={image1}
+                    // src={image1}
                     alt="floater"
-                />
-                {/* <img src={image} alt=''/> */}
+                /> */}
+                <picture className='pics'>
+                    <source media="(max-width: 768px)" srcset={image2} className='image-landing'/>
+                    <img src={image1} alt="image1"  />
+                </picture>
+                {/* <img src={image1} alt='landingImage'/> */}
             </motion.div>
         </div>
     </header>

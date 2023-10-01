@@ -17,7 +17,7 @@ function App() {
       <Services/>
       <Qualities/>
       <SubscribeEmail/>
-      <Footer/>
+      {/* <Footer/> */}
 
       
     </div>

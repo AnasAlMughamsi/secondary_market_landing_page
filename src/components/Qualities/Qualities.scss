@@ -4,12 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .quality-title {
         display: flex;
         flex-direction: column;
         margin-block-end: 4rem;
         justify-content: center;
         align-items: center;
+        text-align: center;
         h2 {
             width: 60%;
             color: #080022;
@@ -34,6 +36,8 @@
         color: white;
         gap: 25px;
         margin-block-end: 5rem;
+        justify-content: center;
+        width: 100%;
         .quality-card {
             width: 552px;
             height: 307px;
@@ -41,20 +45,17 @@
             text-align: left;
             border-radius: 16px;
             background: #10014B;
-            // justify-content: start;
-            // align-items: start;
-
             padding-inline-start:  46px;
-            
 
             .jigsaw-img {
-                // width: 200px;
-                // height: 300px;
                 object-fit: contain;
+            }
+            
+            .card-hand-icon {
+                padding-block-start: 12px;
             }
 
             .inner-card {
-                // justify-content: space-around;
                 align-items: start;
                 gap: 0.5rem;
                 justify-content: center;
@@ -71,13 +72,76 @@
                     font-size: 19px;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: 120%; /* 22.8px */
+                    line-height: 120%; 
                 }
 
             }
         }
 
+    }
+}
 
 
+
+@media screen and (max-width: 1536px) {
+    .wrapper {
+      max-width: 1366px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .qualities-cards-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .quality-card {
+            width: 452px ;
+            height: 287px ;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+   
+}
+
+@media  screen and (max-width: 640px) {
+    .qualities-cards-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: red;
+        .quality-card {
+            background-color: red;
+            width: 352px !important;
+            height: 287px !important;
+
+            .inner-card {
+                // align-items: start;
+                gap: 0rem !important;
+                // justify-content: center;
+
+                h3 {
+                    margin: 0;
+                    font-size: 20px !important;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 32.4px */
+                }
+                p {
+                    color:rgba(255, 255, 255, 0.70);
+                    font-size: 16px !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; 
+                }
+
+            }
+        }
     }
 }

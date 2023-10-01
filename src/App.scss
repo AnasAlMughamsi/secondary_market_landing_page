@@ -1,44 +1,13 @@
-* {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  
-
+* { 
+  // padding: 0;
+  // margin: 0;
+  // box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
+:root {
+  --email_card_width: 80%;
+  // --email_card_height: 5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 /* flexbox and grid */
 
 .flex {
@@ -110,3 +79,35 @@ li {
     border: none;
   }
 }
+
+
+@media screen and (max-width: 1536px) {
+  .wrapper {
+    max-width: 1366px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+    
+  .btn {
+    padding: 12px 14px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 640px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    max-width: 475px;
+  }
+}
+
